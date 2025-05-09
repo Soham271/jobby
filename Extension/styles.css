@@ -1,0 +1,118 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+}
+
+.main {
+  width: 300px;
+  padding: 20px;
+  background: linear-gradient(145deg, #ffffff, #f0f4f8);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  transition: transform 0.3s ease;
+}
+
+.main:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.ID {
+  width: 100%;
+  padding: 12px;
+  background-color: #edf2f7;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 4px solid #4299e1;
+  transition: all 0.2s ease;
+}
+
+.ID:hover {
+  background-color: #e2e8f0;
+  border-left-color: #3182ce;
+}
+
+.ID a {
+  color: #2d3748;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  display: block;
+  position: relative;
+  padding: 2px 0;
+}
+
+.ID a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #4299e1;
+  transition: all 0.3s ease;
+}
+
+.ID a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.btn {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(66, 153, 225, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #dc3545;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #dc3545;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.error-message {
+  color: #dc3545;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #dc3545;
+  border-radius: 4px;
+  font-size: 0.9em;
+  max-width: 250px;
+  word-break: break-word;
+  display: none; /* Script will show when needed */
+}
